@@ -1,10 +1,12 @@
-
-import static org.junit.Assert.*;
-
-import java.util.*;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import static org.junit.Assert.*;
 
 public class PMO_Test {
 
@@ -13,13 +15,13 @@ public class PMO_Test {
 
 	static {
 		tariff.put("simpleLabyrinth", 2.0);
-		tariff.put("simple2Labyrinth", 2.0);
+		/*tariff.put("simple2Labyrinth", 2.0);
 		tariff.put("simple4Labyrinth", 2.0);
 		tariff.put("nonsymmetricalLabyrinth", 2.0);
 		tariff.put("nonsymmetrical2Labyrinth", 2.0);
 		tariff.put("nonsymmetrical3Labyrinth", 1.0);
 		tariff.put("Q689A697",0.2);
-		tariff.put("loopTest",0.2);
+		tariff.put("loopTest",0.2);*/
 	}
 
 	public static double getTariff(String testName) {
@@ -35,7 +37,7 @@ public class PMO_Test {
 
 	@Before
 	public void preparation() {
-		pathFinder = (PathFinderInterface) PMO_GeneralPurposeFabric.fabric("PathFinder2", "PathFinderInterface");
+		pathFinder = (PathFinderInterface) PMO_GeneralPurposeFabric.fabric("PathFinder", "PathFinderInterface");
 		labyrinth = new PMO_Labyrinth();
 	}
 
